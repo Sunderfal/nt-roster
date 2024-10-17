@@ -337,8 +337,6 @@ async def nt_duty():
         leaders_ids = [leader["id"] for leader in leadership]
         status_data = await functions.get_player_status(leaders_ids)
 
-        print(status_data)
-
         if "userPresences" in status_data:
             for leader in leadership:
                 leader_id = leader["id"]
