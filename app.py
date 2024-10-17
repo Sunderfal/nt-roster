@@ -197,7 +197,7 @@ async def info(interaction: discord.Interaction, member: discord.Member = None):
 
 @bot.tree.command(name="ia", description="Change a member's status to active or inactive")
 @discord.app_commands.describe(member="Member to introduce")
-@has_specific_role("NT Enforcer")
+@has_specific_role("Talons Enforcer")
 async def ia(interaction: discord.Interaction, member: discord.Member = None):
     
     username = functions.get_username(interaction, member)
@@ -229,7 +229,7 @@ async def ia(interaction: discord.Interaction, member: discord.Member = None):
 @discord.app_commands.describe(members="Mention/Ping the members to introduce", amount="Amount of points to add", type="Type of points") 
 @discord.app_commands.choices(type=POINT_TYPES)
 @discord.app_commands.choices(method=METHOD_TYPES)
-@has_specific_role("NT Enforcer")
+@has_specific_role("Talons Enforcer")
 async def update(interaction: discord.Interaction, members: str, amount: int, type: discord.app_commands.Choice[str], method: discord.app_commands.Choice[str]):
 
     await interaction.response.defer()
@@ -288,7 +288,7 @@ async def update(interaction: discord.Interaction, members: str, amount: int, ty
 
 @bot.tree.command(name="strike", description="Adds a new strike or warn to the member introduced")
 @discord.app_commands.describe(member="Member to introduce", reason="Reason for the punishment", evidence="Proof of the punishment (gyazo)") 
-@has_specific_role("NT Enforcer")
+@has_specific_role("Talons Enforcer")
 async def strike(interaction: discord.Interaction, member: discord.Member, reason: str, evidence: str):
 
     username = member.display_name
