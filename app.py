@@ -91,7 +91,7 @@ async def on_member_update(before: discord.Member, after: discord.Member):
             print(f"Added {username} to the JSON")
 
         data.append(valid_user_data)
-    elif before.display_name != after.display_name:
+    elif before.display_name != after.display_name and NT_ROLE_ID in after_roles:
         before_username = before.display_name
         after_username = after.display_name
         functions.update_user_username(data, before_username, after_username)
