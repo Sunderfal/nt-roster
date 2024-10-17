@@ -10,13 +10,13 @@ METHOD_TYPES = [
     discord.app_commands.Choice(name="Remove", value="remove")
 ]
 
-def has_specific_role(role_name):
+def has_specific_role(*role_names):
     async def predicate(interaction: discord.Interaction):
         
         ok = False
-        role = discord.utils.get(interaction.guild.roles, name=role_name)
+        roles = [discord.utils.get(interaction.guild.roles, name=role_name) for role_name in role_names]
 
-        if role in interaction.user.roles:
+        if any(roles in interaction.user.roles):
             ok = True
         else:
             await interaction.response.send_message("You don't have permissions to execute this command.", ephemeral=True)
