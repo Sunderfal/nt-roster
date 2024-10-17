@@ -6,8 +6,8 @@ import os
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
-AWARDS_PATH = "../data/awards.json"
-ENV_PATH = "../env/.env"
+AWARDS_PATH = "./data/awards.json"
+ENV_PATH = "./env/.env"
 
 if os.path.exists(ENV_PATH):
     load_dotenv(ENV_PATH)
