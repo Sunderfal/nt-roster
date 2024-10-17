@@ -14,9 +14,9 @@ def has_specific_role(*role_names):
     async def predicate(interaction: discord.Interaction):
         
         ok = False
-        roles = [discord.utils.get(interaction.guild.roles, name=role_name) for role_name in role_names]
+        user_roles = [role.name for role in interaction.user.roles]
 
-        if any(roles in interaction.user.roles):
+        if any(role in user_roles for role in role_names):
             ok = True
         else:
             await interaction.response.send_message("You don't have permissions to execute this command.", ephemeral=True)
