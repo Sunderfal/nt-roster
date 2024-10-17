@@ -1,0 +1,56 @@
+{
+    "dr_roles": [
+        {
+            "id": 1251583723485401161,
+            "name": "Shadow Fang [I]",
+            "drs_needed": 100
+        },
+        {
+            "id": 1251584200855916695,
+            "name": "Shadow Fang [II]",
+            "drs_needed": 200
+        },
+        {
+            "id": 1251584383014666320,
+            "name": "Shadow Fang [III]",
+            "drs_needed": 500
+        },
+        {
+            "id": 1251584582806012076,
+            "name": "Shadow Fang [Phantom of the Dark]",
+            "drs_needed": 1000
+        }
+    ],
+    "pdr_roles": [
+        {
+            "id": 1251585153986203699,
+            "name": "Insignia of the Executioner [I]",
+            "pdrs_needed": 10
+        },
+        {
+            "id": 1251585350875222157,
+            "name": "Insignia of the Executioner [II]",
+            "pdrs_needed": 20
+        },
+        {
+            "id": 1251585584397291570,
+            "name": "Insignia of the Executioner [III]",
+            "pdrs_needed": 30
+        },
+        {
+            "id": 1251585706124640287,
+            "name": "Insignia of the Executioner [Stalker]",
+            "pdrs_needed": 40
+        },
+        {
+            "id": 1251585800261337098,
+            "name": "Insignia of the Executioner [Nightshade]",
+            "pdrs_needed": 50
+        },
+        {
+            "id": 1251586014401531906,
+            "name": "Insignia of the Executioner [Champion of Shadows]",
+            "pdrs_needed": 100
+        }
+    ]
+}
