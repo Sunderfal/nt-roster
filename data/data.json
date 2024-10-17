@@ -1,7 +1,7 @@
 [
     {
         "username": "Moonderfal",
-        "DR": 14,
+        "DR": 16,
         "PDR": 2,
         "status": "Active",
         "current_awards": {
@@ -70,14 +70,20 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [],
+            "strikes": [
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-9-21",
+                    "evidence": "https://gyazo.com/a40870442fb43f35055193c73bdf03b7"
+                }
+            ],
             "warns": []
         },
         "roblox_profile": "https://www.roblox.com/users/287863264/profile"
     },
     {
         "username": "N_ightpaw",
-        "DR": 47,
+        "DR": 50,
         "PDR": 14,
         "status": "Active",
         "current_awards": {
@@ -89,14 +95,25 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [],
+            "strikes": [
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-6-30",
+                    "evidence": "https://gyazo.com/d23cef81335666491be1a7f20c5c66dd"
+                },
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-8-11",
+                    "evidence": "https://gyazo.com/cbd00ad64d11d6692c741c2fbb39c1f3"
+                }
+            ],
             "warns": []
         },
         "roblox_profile": "https://www.roblox.com/users/293668283/profile"
     },
     {
         "username": "AngelByKiller",
-        "DR": 20,
+        "DR": 31,
         "PDR": 10,
         "status": "Active",
         "current_awards": {
@@ -108,7 +125,18 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [],
+            "strikes": [
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-8-3",
+                    "evidence": "https://gyazo.com/5f16174b0013c1c610f60bdb0e1eb024"
+                },
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-8-25",
+                    "evidence": "https://gyazo.com/1a5a524804ba5f5db0c6eb5037d8d4fc"
+                }
+            ],
             "warns": []
         },
         "roblox_profile": "https://www.roblox.com/users/200006055/profile"
@@ -127,8 +155,24 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [],
-            "warns": []
+            "strikes": [
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-9-1",
+                    "evidence": "https://gyazo.com/7c62241b5db1ed4dab71577385df4b56"
+                },
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-9-16",
+                    "evidence": "https://gyazo.com/d7cc88c271f11ed861e0e53568eb029e"
+                }
+            ],
+            "warns": [
+                {
+                    "reason": "Reached 1º set of Strikes",
+                    "date": "2024-8-23"
+                }
+            ]
         },
         "roblox_profile": "https://www.roblox.com/users/376305868/profile"
     },
@@ -146,7 +190,13 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [],
+            "strikes": [
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-6-29",
+                    "evidence": "https://gyazo.com/b26bfe46c39b010f89f6329c78978d23"
+                }
+            ],
             "warns": []
         },
         "roblox_profile": "https://www.roblox.com/users/1415395925/profile"
@@ -172,7 +222,7 @@
     },
     {
         "username": "enricokozo",
-        "DR": 1,
+        "DR": 2,
         "PDR": 0,
         "status": "Active",
         "current_awards": {
@@ -241,7 +291,13 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [],
+            "strikes": [
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-10-11",
+                    "evidence": "https://gyazo.com/63a793ade830c0af46870c29b2f2f19f"
+                }
+            ],
             "warns": []
         },
         "roblox_profile": "https://www.roblox.com/users/648694011/profile"
@@ -260,15 +316,26 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [],
+            "strikes": [
+                {
+                    "reason": "Wearing incorrect TRIALIST hat combo",
+                    "date": "2024-9-1",
+                    "evidence": "https://gyazo.com/a952129ebe79636e75d199d70f9757af"
+                },
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-9-29",
+                    "evidence": "https://gyazo.com/de7e2c1d68fb60f6455b21b8e23d37cd"
+                }
+            ],
             "warns": []
         },
         "roblox_profile": "https://www.roblox.com/users/3216640521/profile"
     },
     {
         "username": "Zelkkro",
-        "DR": 10,
-        "PDR": 5,
+        "DR": 11,
+        "PDR": 6,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -279,14 +346,25 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [],
+            "strikes": [
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-7-2",
+                    "evidence": "https://gyazo.com/4088b7e83fec70c670be2a4bd7e4ecbe"
+                },
+                {
+                    "reason": "Not wearing NT avatar",
+                    "date": "2024-10-13",
+                    "evidence": "https://gyazo.com/19b04071f7fac742fe4b8e120f04b6b1"
+                }
+            ],
             "warns": []
         },
         "roblox_profile": "https://www.roblox.com/users/1344395050/profile"
     },
     {
         "username": "Sunderfal",
-        "DR": 30,
+        "DR": 31,
         "PDR": 5,
         "status": "Active",
         "current_awards": {
