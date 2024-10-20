@@ -1,7 +1,7 @@
 [
     {
         "username": "Moonderfal",
-        "DR": 16,
+        "DR": 17,
         "PDR": 2,
         "status": "Active",
         "current_awards": {
@@ -20,7 +20,7 @@
     },
     {
         "username": "ZDVNZ",
-        "DR": 58,
+        "DR": 59,
         "PDR": 18,
         "status": "IA",
         "current_awards": {
@@ -39,7 +39,7 @@
     },
     {
         "username": "Rvbypaw",
-        "DR": 39,
+        "DR": 40,
         "PDR": 12,
         "status": "Active",
         "current_awards": {
@@ -58,7 +58,7 @@
     },
     {
         "username": "heyyanewbie",
-        "DR": 71,
+        "DR": 73,
         "PDR": 18,
         "status": "Active",
         "current_awards": {
@@ -83,7 +83,7 @@
     },
     {
         "username": "N_ightpaw",
-        "DR": 50,
+        "DR": 52,
         "PDR": 14,
         "status": "Active",
         "current_awards": {
@@ -113,7 +113,7 @@
     },
     {
         "username": "AngelByKiller",
-        "DR": 31,
+        "DR": 32,
         "PDR": 10,
         "status": "Active",
         "current_awards": {
@@ -155,22 +155,15 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [
-                {
-                    "reason": "Not wearing NT avatar",
-                    "date": "2024-9-1",
-                    "evidence": "https://gyazo.com/7c62241b5db1ed4dab71577385df4b56"
-                },
-                {
-                    "reason": "Not wearing NT avatar",
-                    "date": "2024-9-16",
-                    "evidence": "https://gyazo.com/d7cc88c271f11ed861e0e53568eb029e"
-                }
-            ],
+            "strikes": [],
             "warns": [
                 {
                     "reason": "Reached 1\u00ba set of Strikes",
                     "date": "2024-8-23"
+                },
+                {
+                    "reason": "Reached 2\u00ba set of Strikes",
+                    "date": "2024-10-20"
                 }
             ]
         },
@@ -222,7 +215,7 @@
     },
     {
         "username": "enricokozo",
-        "DR": 2,
+        "DR": 4,
         "PDR": 0,
         "status": "Active",
         "current_awards": {
@@ -364,7 +357,7 @@
     },
     {
         "username": "Sunderfal",
-        "DR": 31,
+        "DR": 32,
         "PDR": 5,
         "status": "Active",
         "current_awards": {

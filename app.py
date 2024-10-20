@@ -337,7 +337,7 @@ async def nt_duty():
         leaders_ids = [leader["id"] for leader in leadership]
         status_data = await functions.get_player_status(leaders_ids)
 
-        if "userPresences" in status_data:
+        try:
             for leader in leadership:
                 leader_id = leader["id"]
                 leader_username = leader["username"]
@@ -389,8 +389,8 @@ async def nt_duty():
 
                     previous_states[leader_id] = current_presence_type
                     previous_games[leader_id] = current_game
-        else:
-            print("\"userPresences\" key wasn't found in the API response")
+        except Exception as e:
+            print(f"The function 'nt_duty' has throwed the following exception: {e}")
 
         await asyncio.sleep(60)
                     

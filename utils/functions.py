@@ -141,7 +141,7 @@ def verify_expired_warns(user: dict):
 async def get_roblox_profile(username: str):
 
     url = f"https://users.roblox.com/v1/users/search?keyword={username}"
-    result = None
+    profile = None
     
     try:   
         async with httpx.AsyncClient() as client:
@@ -150,16 +150,15 @@ async def get_roblox_profile(username: str):
         if response.status_code == 200:
             user_data = response.json()
             user_id = user_data["data"][0]["id"]
-            result = f"https://www.roblox.com/users/{user_id}/profile"
+            profile = f"https://www.roblox.com/users/{user_id}/profile"
         elif response.status_code == 429:
             print("Too many requests to get the roblox profile. Trying again in 60 seconds...")
             await asyncio.sleep(60)
-            result = await get_roblox_profile(username)
+            profile = await get_roblox_profile(username)
     except Exception as e:
-        result = None
         print(f"The function 'get_roblox_profile' has throwed the following exception: {e}")
 
-    return result
+    return profile
 
 async def get_player_status(user_ids: list):
     
@@ -169,14 +168,16 @@ async def get_player_status(user_ids: list):
     headers = {"Content-Type": "application/json", "Cookie": roblox_security_cookie, "accept": "application/json"}
     body = {"userIds": user_ids}
 
+    status_data = {}
+
     try:
         async with httpx.AsyncClient() as client:
             response = await client.post(url, headers=headers, json=body)
+        status_data = response.json()
     except Exception as e:
-        response = None
         print(f"The function 'get_player_status' has throwed the following exception: {e}")
 
-    return response.json()
+    return status_data
 
 async def get_users_by_ids(interaction: discord.Interaction, mentions: list[str]):
 
