@@ -29,8 +29,6 @@ if os.path.exists(ENV_PATH):
     
 TOKEN = os.getenv("TOKEN")
 
-current_time = datetime.now(timezone.utc).strftime("%m/%d/%Y")
-
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
@@ -116,6 +114,7 @@ async def commands(interaction: discord.Interaction):
 
     command_author = interaction.user.display_name
     command_author_pfp = interaction.user.avatar.url if interaction.user.avatar is not None else interaction.user.default_avatar.url
+    current_time = datetime.now(timezone.utc).strftime("%m/%d/%Y")
 
     embed = discord.Embed(
         title="COMMANDS LIST",
@@ -146,6 +145,7 @@ async def leaderboard(interaction: discord.Interaction):
 
     command_author = interaction.user.display_name
     command_author_pfp = interaction.user.avatar.url if interaction.user.avatar is not None else interaction.user.default_avatar.url
+    current_time = datetime.now(timezone.utc).strftime("%m/%d/%Y")
 
     view = LeaderboardView(data, current_time, command_author, command_author_pfp)
 
@@ -165,6 +165,7 @@ async def info(interaction: discord.Interaction, member: discord.Member = None):
     if user_data is not None:
         command_author = interaction.user.display_name
         command_author_pfp = interaction.user.avatar.url if interaction.user.avatar is not None else interaction.user.default_avatar.url
+        current_time = datetime.now(timezone.utc).strftime("%m/%d/%Y")
 
         embed = discord.Embed(
             color=discord.Color.dark_red()
@@ -180,6 +181,7 @@ async def info(interaction: discord.Interaction, member: discord.Member = None):
 
         if functions.verify_expired_warns(user_data):
             functions.update_json(DATA_PATH, data)
+            functions.update_json(DATA_BACKUP_PATH, data)
 
         if len(user_data["punishments"]["warns"]) >= 1:
             for i, warn in enumerate(user_data["punishments"]["warns"]):
@@ -208,6 +210,7 @@ async def ia(interaction: discord.Interaction, member: discord.Member = None):
     if user_data is not None:
         command_author = interaction.user.display_name
         command_author_pfp = interaction.user.avatar.url if interaction.user.avatar is not None else interaction.user.default_avatar.url
+        current_time = datetime.now(timezone.utc).strftime("%m/%d/%Y")
 
         functions.update_user_status(user_data)
         new_user_data = user_data["status"]
@@ -240,43 +243,47 @@ async def update(interaction: discord.Interaction, members: str, amount: int, ty
     
     channel = bot.get_channel(NT_GENERAL_CHANNEL_ID)
 
-    for user in users:
-        username = user.display_name
-        user_mention = user.mention
+    try:        
+        for user in users:
+            username = user.display_name
+            user_mention = user.mention
 
-        user_data = functions.find_user(data, username)
+            user_data = functions.find_user(data, username)
 
-        if user_data is not None:
-            old_points = user_data[type.value]
+            if user_data is not None:
+                old_points = user_data[type.value]
 
-            command_author = interaction.user.display_name
-            command_author_pfp = interaction.user.avatar.url if interaction.user.avatar is not None else interaction.user.default_avatar.url
+                command_author = interaction.user.display_name
+                command_author_pfp = interaction.user.avatar.url if interaction.user.avatar is not None else interaction.user.default_avatar.url
+                current_time = datetime.now(timezone.utc).strftime("%m/%d/%Y")
 
-            functions.update_user_points(user_data, amount, type.value, method.value)
-            new_points = user_data[type.value]
+                functions.update_user_points(user_data, amount, type.value, method.value)
+                new_points = user_data[type.value]
 
-            method_title = "ADDED" if method.value == "add" else "REMOVED"
-            title = f"DREAD RAID POINTS {method_title}" if type.value == "DR" else f"PURE DREAD RAID POINTS {method_title}"
+                method_title = "ADDED" if method.value == "add" else "REMOVED"
+                title = f"DREAD RAID POINTS {method_title}" if type.value == "DR" else f"PURE DREAD RAID POINTS {method_title}"
 
-            embed = discord.Embed(
-                title=title,
-                color=discord.Color.green()
-            )
+                embed = discord.Embed(
+                    title=title,
+                    color=discord.Color.green()
+                )
 
-            type_points = "Dread Raid Points" if type.value == "DR" else "Pure Dread Draid Points"
-            value = f"{type_points} before -> {old_points}\n{type_points} now -> {new_points}"
-            
-            embed.add_field(name=username, value=value)
-            embed.set_footer(text=f"{command_author}   •   {current_time}", icon_url=command_author_pfp)
+                type_points = "Dread Raid Points" if type.value == "DR" else "Pure Dread Draid Points"
+                value = f"{type_points} before -> {old_points}\n{type_points} now -> {new_points}"
+                
+                embed.add_field(name=username, value=value)
+                embed.set_footer(text=f"{command_author}   •   {current_time}", icon_url=command_author_pfp)
 
-            await interaction.followup.send(embed=embed)
+                await interaction.followup.send(embed=embed)
 
-            award = await functions.manage_roles(user, user_data, new_points, type.value)
+                award = await functions.manage_roles(user, user_data, new_points, type.value)
 
-            if award is not None:
-                await channel.send(f"Congratulations {user_mention}, you have obtained the following award: **{award}**")
-        else:
-            not_found_users.append(user_mention)
+                if award is not None:
+                    await channel.send(f"Congratulations {user_mention}, you have obtained the following award: **{award}**")
+            else:
+                not_found_users.append(user_mention)
+    except Exception as e:
+        print(f"The function 'update' has throwed the following exception: {e.__class__.__name__}")
 
     functions.update_json(DATA_PATH, data)
     functions.update_json(DATA_BACKUP_PATH, data)
@@ -299,6 +306,7 @@ async def strike(interaction: discord.Interaction, member: discord.Member, reaso
     if user_data is not None:
         command_author = interaction.user.display_name
         command_author_pfp = interaction.user.avatar
+        current_time = datetime.now(timezone.utc).strftime("%m/%d/%Y")
 
         is_warned = functions.punish_user(user_data, reason, evidence)
         punish_msg = f"striked + warned **({len(user_data["punishments"]["warns"])}º set of Strikes)**" if is_warned else "striked"
@@ -333,7 +341,7 @@ async def nt_duty():
     channel = bot.get_channel(NT_DUTY_CHANNEL_ID)
 
     while not bot.is_closed():
-
+        
         leaders_ids = [leader["id"] for leader in leadership]
         status_data = await functions.get_player_status(leaders_ids)
 
@@ -366,11 +374,11 @@ async def nt_duty():
 
                         game_image_url = games_info[current_game]["game_image"]
 
-                        embed.add_field(name=f"ENTITY", value=f"[{leader_username}](https://www.roblox.com/users/{leader_id}/profile)", inline=True)
-                        embed.add_field(name=f"LOCATION", value=games_info[current_game]["game_name"], inline=True)
+                        embed.add_field(name="ENTITY", value=f"[{leader_username}](https://www.roblox.com/users/{leader_id}/profile)", inline=True)
+                        embed.add_field(name="LOCATION", value=games_info[current_game]["game_name"], inline=True)
 
                         embed.set_image(url=game_image_url)
-                        embed.set_footer(text="In shadows deep, we take our flight, With every step, we guard the Imperator's light.", icon_url=NT_LOGO)
+                        embed.set_footer(text="In shadows deep, we take our flight, With every step, we guard the Mastermind's light.", icon_url=NT_LOGO)
 
                         nt_role = channel.guild.get_role(NT_ROLE_ID)
                         nt_trialist_role = channel.guild.get_role(NT_ROLE_TRIALIST_ID)
@@ -378,19 +386,19 @@ async def nt_duty():
                         await channel.send(f"{nt_role.mention} {nt_trialist_role.mention}", embed=embed)
                     elif current_presence_type != 2 and previous_presence_type == 2 and previous_game in games_info.keys():
                         embed = discord.Embed(
-                            title=f"AN ENTITY HAS LEFT THE GAME",
+                            title="AN ENTITY HAS LEFT THE GAME",
                             description=f"[{leader_username}](https://www.roblox.com/users/{leader_id}/profile) has left the game!",
                             color=discord.Color.dark_red()
                         )
 
-                        embed.set_footer(text="In shadows deep, we take our flight, With every step, we guard the Imperator's light.", icon_url=NT_LOGO)
+                        embed.set_footer(text="In shadows deep, we take our flight, With every step, we guard the Mastermind's light.", icon_url=NT_LOGO)
 
                         await channel.send(embed=embed)
 
                     previous_states[leader_id] = current_presence_type
                     previous_games[leader_id] = current_game
         except Exception as e:
-            print(f"The function 'nt_duty' has throwed the following exception: {e}")
+            print(f"The function 'nt_duty' has throwed the following exception: {e.__class__.__name__}")
 
         await asyncio.sleep(60)
                     

@@ -1,7 +1,7 @@
 [
     {
         "username": "Moonderfal",
-        "DR": 17,
+        "DR": 21,
         "PDR": 2,
         "status": "Active",
         "current_awards": {
@@ -20,16 +20,18 @@
     },
     {
         "username": "ZDVNZ",
-        "DR": 59,
-        "PDR": 18,
+        "DR": 67,
+        "PDR": 22,
         "status": "IA",
         "current_awards": {
             "dr_award": "",
-            "pdr_award": ""
+            "pdr_award": "Insignia of the Executioner [II]"
         },
         "last_awards": {
             "dr_award": [],
-            "pdr_award": []
+            "pdr_award": [
+                "Insignia of the Executioner [I]"
+            ]
         },
         "punishments": {
             "strikes": [],
@@ -38,13 +40,13 @@
         "roblox_profile": "https://www.roblox.com/users/583229964/profile"
     },
     {
-        "username": "Rvbypaw",
-        "DR": 40,
-        "PDR": 12,
+        "username": "N_ightpaw",
+        "DR": 60,
+        "PDR": 17,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
-            "pdr_award": ""
+            "pdr_award": "Insignia of the Executioner [I]"
         },
         "last_awards": {
             "dr_award": [],
@@ -58,16 +60,18 @@
     },
     {
         "username": "heyyanewbie",
-        "DR": 73,
-        "PDR": 18,
+        "DR": 80,
+        "PDR": 21,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
-            "pdr_award": ""
+            "pdr_award": "Insignia of the Executioner [II]"
         },
         "last_awards": {
             "dr_award": [],
-            "pdr_award": []
+            "pdr_award": [
+                "Insignia of the Executioner [I]"
+            ]
         },
         "punishments": {
             "strikes": [
@@ -82,12 +86,12 @@
         "roblox_profile": "https://www.roblox.com/users/287863264/profile"
     },
     {
-        "username": "N_ightpaw",
-        "DR": 52,
-        "PDR": 14,
+        "username": "Rvbypaw",
+        "DR": 46,
+        "PDR": 17,
         "status": "Active",
         "current_awards": {
-            "dr_award": "",
+            "dr_award": "Insignia of the Executioner [I]",
             "pdr_award": ""
         },
         "last_awards": {
@@ -113,16 +117,18 @@
     },
     {
         "username": "AngelByKiller",
-        "DR": 32,
-        "PDR": 10,
+        "DR": 43,
+        "PDR": 14,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
-            "pdr_award": ""
+            "pdr_award": "Insignia of the Executioner [I]"
         },
         "last_awards": {
             "dr_award": [],
-            "pdr_award": []
+            "pdr_award": [
+                "Insignia of the Executioner [I]"
+            ]
         },
         "punishments": {
             "strikes": [
@@ -143,8 +149,8 @@
     },
     {
         "username": "Moms_Spaghetti22",
-        "DR": 31,
-        "PDR": 8,
+        "DR": 34,
+        "PDR": 9,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -155,7 +161,13 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [],
+            "strikes": [
+                {
+                    "reason": "Not wearing NT uniform.",
+                    "date": "2024-11-04",
+                    "evidence": "https://gyazo.com/f50ab808883883ead60f69d7bdeda152"
+                }
+            ],
             "warns": [
                 {
                     "reason": "Reached 1\u00ba set of Strikes",
@@ -171,9 +183,9 @@
     },
     {
         "username": "radiowaiv",
-        "DR": 29,
-        "PDR": 6,
-        "status": "IA",
+        "DR": 30,
+        "PDR": 7,
+        "status": "Active",
         "current_awards": {
             "dr_award": "",
             "pdr_award": ""
@@ -188,6 +200,11 @@
                     "reason": "Not wearing NT avatar",
                     "date": "2024-6-29",
                     "evidence": "https://gyazo.com/b26bfe46c39b010f89f6329c78978d23"
+                },
+                {
+                    "reason": "Not wearing NT uniform",
+                    "date": "2024-11-13",
+                    "evidence": "https://gyazo.com/cbfd6eabc4f172091049c1adf7b089e8"
                 }
             ],
             "warns": []
@@ -196,12 +213,12 @@
     },
     {
         "username": "UsedPython19",
-        "DR": 22,
-        "PDR": 10,
+        "DR": 27,
+        "PDR": 11,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
-            "pdr_award": ""
+            "pdr_award": "Insignia of the Executioner [I]"
         },
         "last_awards": {
             "dr_award": [],
@@ -215,8 +232,8 @@
     },
     {
         "username": "enricokozo",
-        "DR": 4,
-        "PDR": 0,
+        "DR": 11,
+        "PDR": 3,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -271,9 +288,9 @@
         "roblox_profile": "https://www.roblox.com/users/164559266/profile"
     },
     {
-        "username": "RuinedZets",
-        "DR": 3,
-        "PDR": 0,
+        "username": "S_hadowpaw",
+        "DR": 5,
+        "PDR": 1,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -286,49 +303,24 @@
         "punishments": {
             "strikes": [
                 {
-                    "reason": "Not wearing NT avatar",
-                    "date": "2024-10-11",
-                    "evidence": "https://gyazo.com/63a793ade830c0af46870c29b2f2f19f"
+                    "reason": "Not wearing NT uniform.",
+                    "date": "2024-11-10",
+                    "evidence": "https://gyazo.com/970e5233e4efb90d747b932b15709b0c"
                 }
             ],
-            "warns": []
-        },
-        "roblox_profile": "https://www.roblox.com/users/648694011/profile"
-    },
-    {
-        "username": "S_hadowpaw",
-        "DR": 3,
-        "PDR": 0,
-        "status": "IA",
-        "current_awards": {
-            "dr_award": "",
-            "pdr_award": ""
-        },
-        "last_awards": {
-            "dr_award": [],
-            "pdr_award": []
-        },
-        "punishments": {
-            "strikes": [
+            "warns": [
                 {
-                    "reason": "Wearing incorrect TRIALIST hat combo",
-                    "date": "2024-9-1",
-                    "evidence": "https://gyazo.com/a952129ebe79636e75d199d70f9757af"
-                },
-                {
-                    "reason": "Not wearing NT avatar",
-                    "date": "2024-9-29",
-                    "evidence": "https://gyazo.com/de7e2c1d68fb60f6455b21b8e23d37cd"
+                    "reason": "Reached 1\u00ba set of Strikes",
+                    "date": "2024-11-03"
                 }
-            ],
-            "warns": []
+            ]
         },
         "roblox_profile": "https://www.roblox.com/users/3216640521/profile"
     },
     {
         "username": "Zelkkro",
-        "DR": 11,
-        "PDR": 6,
+        "DR": 15,
+        "PDR": 7,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -339,25 +331,19 @@
             "pdr_award": []
         },
         "punishments": {
-            "strikes": [
+            "strikes": [],
+            "warns": [
                 {
-                    "reason": "Not wearing NT avatar",
-                    "date": "2024-7-2",
-                    "evidence": "https://gyazo.com/4088b7e83fec70c670be2a4bd7e4ecbe"
-                },
-                {
-                    "reason": "Not wearing NT avatar",
-                    "date": "2024-10-13",
-                    "evidence": "https://gyazo.com/19b04071f7fac742fe4b8e120f04b6b1"
+                    "reason": "Reached 1\u00ba set of Strikes",
+                    "date": "2024-11-09"
                 }
-            ],
-            "warns": []
+            ]
         },
         "roblox_profile": "https://www.roblox.com/users/1344395050/profile"
     },
     {
         "username": "Sunderfal",
-        "DR": 32,
+        "DR": 36,
         "PDR": 5,
         "status": "Active",
         "current_awards": {

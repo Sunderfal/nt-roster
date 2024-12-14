@@ -156,7 +156,7 @@ async def get_roblox_profile(username: str):
             await asyncio.sleep(60)
             profile = await get_roblox_profile(username)
     except Exception as e:
-        print(f"The function 'get_roblox_profile' has throwed the following exception: {e}")
+        print(f"The function 'get_roblox_profile' has throwed the following exception: {e.__class__.__name__}")
 
     return profile
 
@@ -175,7 +175,7 @@ async def get_player_status(user_ids: list):
             response = await client.post(url, headers=headers, json=body)
         status_data = response.json()
     except Exception as e:
-        print(f"The function 'get_player_status' has throwed the following exception: {e}")
+        print(f"The function 'get_player_status' has throwed the following exception: {e.__class__.__name__}")
 
     return status_data
 
