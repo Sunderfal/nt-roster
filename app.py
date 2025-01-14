@@ -325,7 +325,7 @@ async def strike(interaction: discord.Interaction, member: discord.Member, reaso
         functions.update_json(DATA_BACKUP_PATH, data)
         await interaction.response.send_message(embed=embed)
         
-        await member.send(f"You have been {punish_msg} for not wearing the NT uniform!\n**Striked by:** {command_author}\n**Date:** {datetime.now().date()}\n**Evidence:** {evidence}\n## if you consider that there is an explicitly valid reason for the withdrawal of your strike/warn, please contact with Sunderfal.")
+        await member.send(f"You have been {punish_msg}!\nReason: {reason}\n**Striked by:** {command_author}\n**Date:** {datetime.now().date()}\n**Evidence:** {evidence}\n## if you consider that there is an explicitly valid reason for the withdrawal of your strike/warn, please contact with Sunderfal.")
     else:
         await interaction.response.send_message("The user entered does not exist in the system.", ephemeral=True)
 

@@ -20,7 +20,7 @@
     },
     {
         "username": "ZDVNZ",
-        "DR": 67,
+        "DR": 69,
         "PDR": 22,
         "status": "IA",
         "current_awards": {
@@ -41,7 +41,7 @@
     },
     {
         "username": "N_ightpaw",
-        "DR": 60,
+        "DR": 62,
         "PDR": 17,
         "status": "Active",
         "current_awards": {
@@ -60,7 +60,7 @@
     },
     {
         "username": "heyyanewbie",
-        "DR": 80,
+        "DR": 84,
         "PDR": 21,
         "status": "Active",
         "current_awards": {
@@ -87,7 +87,7 @@
     },
     {
         "username": "Rvbypaw",
-        "DR": 46,
+        "DR": 49,
         "PDR": 17,
         "status": "Active",
         "current_awards": {
@@ -117,7 +117,7 @@
     },
     {
         "username": "AngelByKiller",
-        "DR": 43,
+        "DR": 47,
         "PDR": 14,
         "status": "Active",
         "current_awards": {
@@ -149,7 +149,7 @@
     },
     {
         "username": "Moms_Spaghetti22",
-        "DR": 34,
+        "DR": 37,
         "PDR": 9,
         "status": "Active",
         "current_awards": {
@@ -166,13 +166,14 @@
                     "reason": "Not wearing NT uniform.",
                     "date": "2024-11-04",
                     "evidence": "https://gyazo.com/f50ab808883883ead60f69d7bdeda152"
+                },
+                {
+                    "reason": "Not wearing NT uniform while Clover was on-duty and allowing her to get killed numerous times. (Masterminds Orders).",
+                    "date": "2024-12-18",
+                    "evidence": "<:Mastermind2_seal:1230198219569365114>"
                 }
             ],
             "warns": [
-                {
-                    "reason": "Reached 1\u00ba set of Strikes",
-                    "date": "2024-8-23"
-                },
                 {
                     "reason": "Reached 2\u00ba set of Strikes",
                     "date": "2024-10-20"
@@ -213,7 +214,7 @@
     },
     {
         "username": "UsedPython19",
-        "DR": 27,
+        "DR": 32,
         "PDR": 11,
         "status": "Active",
         "current_awards": {
@@ -232,8 +233,8 @@
     },
     {
         "username": "enricokozo",
-        "DR": 11,
-        "PDR": 3,
+        "DR": 17,
+        "PDR": 5,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -272,7 +273,7 @@
         "username": "Kptheria",
         "DR": 5,
         "PDR": 0,
-        "status": "Active",
+        "status": "IA",
         "current_awards": {
             "dr_award": "",
             "pdr_award": ""
@@ -288,38 +289,8 @@
         "roblox_profile": "https://www.roblox.com/users/164559266/profile"
     },
     {
-        "username": "S_hadowpaw",
-        "DR": 5,
-        "PDR": 1,
-        "status": "Active",
-        "current_awards": {
-            "dr_award": "",
-            "pdr_award": ""
-        },
-        "last_awards": {
-            "dr_award": [],
-            "pdr_award": []
-        },
-        "punishments": {
-            "strikes": [
-                {
-                    "reason": "Not wearing NT uniform.",
-                    "date": "2024-11-10",
-                    "evidence": "https://gyazo.com/970e5233e4efb90d747b932b15709b0c"
-                }
-            ],
-            "warns": [
-                {
-                    "reason": "Reached 1\u00ba set of Strikes",
-                    "date": "2024-11-03"
-                }
-            ]
-        },
-        "roblox_profile": "https://www.roblox.com/users/3216640521/profile"
-    },
-    {
         "username": "Zelkkro",
-        "DR": 15,
+        "DR": 16,
         "PDR": 7,
         "status": "Active",
         "current_awards": {
@@ -343,7 +314,7 @@
     },
     {
         "username": "Sunderfal",
-        "DR": 36,
+        "DR": 38,
         "PDR": 5,
         "status": "Active",
         "current_awards": {
