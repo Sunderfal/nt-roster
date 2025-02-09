@@ -378,7 +378,7 @@ async def nt_duty():
                         embed.add_field(name="LOCATION", value=games_info[current_game]["game_name"], inline=True)
 
                         embed.set_image(url=game_image_url)
-                        embed.set_footer(text="In shadows deep, we take our flight, With every step, we guard the Mastermind's light.", icon_url=NT_LOGO)
+                        embed.set_footer(text="NO SHADOW IS EMPTY.", icon_url=NT_LOGO)
 
                         nt_role = channel.guild.get_role(NT_ROLE_ID)
                         nt_trialist_role = channel.guild.get_role(NT_ROLE_TRIALIST_ID)
@@ -391,7 +391,7 @@ async def nt_duty():
                             color=discord.Color.dark_red()
                         )
 
-                        embed.set_footer(text="In shadows deep, we take our flight, With every step, we guard the Mastermind's light.", icon_url=NT_LOGO)
+                        embed.set_footer(text="NO SHADOW IS EMPTY.", icon_url=NT_LOGO)
 
                         await channel.send(embed=embed)
 

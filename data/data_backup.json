@@ -20,7 +20,7 @@
     },
     {
         "username": "ZDVNZ",
-        "DR": 69,
+        "DR": 71,
         "PDR": 22,
         "status": "IA",
         "current_awards": {
@@ -41,27 +41,29 @@
     },
     {
         "username": "N_ightpaw",
-        "DR": 62,
-        "PDR": 17,
+        "DR": 70,
+        "PDR": 20,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
-            "pdr_award": "Insignia of the Executioner [I]"
+            "pdr_award": "Insignia of the Executioner [II]"
         },
         "last_awards": {
             "dr_award": [],
-            "pdr_award": []
+            "pdr_award": [
+                "Insignia of the Executioner [I]"
+            ]
         },
         "punishments": {
             "strikes": [],
             "warns": []
         },
-        "roblox_profile": "https://www.roblox.com/users/2249085795/profile"
+        "roblox_profile": "https://www.roblox.com/users/293668283/profile"
     },
     {
         "username": "heyyanewbie",
-        "DR": 84,
-        "PDR": 21,
+        "DR": 92,
+        "PDR": 24,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -87,8 +89,8 @@
     },
     {
         "username": "Rvbypaw",
-        "DR": 49,
-        "PDR": 17,
+        "DR": 51,
+        "PDR": 18,
         "status": "Active",
         "current_awards": {
             "dr_award": "Insignia of the Executioner [I]",
@@ -113,11 +115,11 @@
             ],
             "warns": []
         },
-        "roblox_profile": "https://www.roblox.com/users/293668283/profile"
+        "roblox_profile": "https://www.roblox.com/users/2249085795/profile"
     },
     {
         "username": "AngelByKiller",
-        "DR": 47,
+        "DR": 49,
         "PDR": 14,
         "status": "Active",
         "current_awards": {
@@ -149,7 +151,7 @@
     },
     {
         "username": "Moms_Spaghetti22",
-        "DR": 37,
+        "DR": 39,
         "PDR": 9,
         "status": "Active",
         "current_awards": {
@@ -214,8 +216,8 @@
     },
     {
         "username": "UsedPython19",
-        "DR": 32,
-        "PDR": 11,
+        "DR": 38,
+        "PDR": 12,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -233,8 +235,8 @@
     },
     {
         "username": "enricokozo",
-        "DR": 17,
-        "PDR": 5,
+        "DR": 23,
+        "PDR": 7,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -290,7 +292,7 @@
     },
     {
         "username": "Zelkkro",
-        "DR": 16,
+        "DR": 20,
         "PDR": 7,
         "status": "Active",
         "current_awards": {
@@ -314,7 +316,7 @@
     },
     {
         "username": "Sunderfal",
-        "DR": 38,
+        "DR": 39,
         "PDR": 5,
         "status": "Active",
         "current_awards": {
@@ -330,5 +332,81 @@
             "warns": []
         },
         "roblox_profile": "https://www.roblox.com/users/1175792084/profile"
+    },
+    {
+        "username": "R0sepaw",
+        "DR": 2,
+        "PDR": 0,
+        "status": "Active",
+        "current_awards": {
+            "dr_award": "",
+            "pdr_award": ""
+        },
+        "last_awards": {
+            "dr_award": [],
+            "pdr_award": []
+        },
+        "punishments": {
+            "strikes": [],
+            "warns": []
+        },
+        "roblox_profile": "https://www.roblox.com/users/113030016/profile"
+    },
+    {
+        "username": "z0mbipaw",
+        "DR": 4,
+        "PDR": 0,
+        "status": "Active",
+        "current_awards": {
+            "dr_award": "",
+            "pdr_award": ""
+        },
+        "last_awards": {
+            "dr_award": [],
+            "pdr_award": []
+        },
+        "punishments": {
+            "strikes": [],
+            "warns": []
+        },
+        "roblox_profile": "https://www.roblox.com/users/3244397582/profile"
+    },
+    {
+        "username": "heavnkai",
+        "DR": 3,
+        "PDR": 0,
+        "status": "Active",
+        "current_awards": {
+            "dr_award": "",
+            "pdr_award": ""
+        },
+        "last_awards": {
+            "dr_award": [],
+            "pdr_award": []
+        },
+        "punishments": {
+            "strikes": [],
+            "warns": []
+        },
+        "roblox_profile": "https://www.roblox.com/users/1258356314/profile"
+    },
+    {
+        "username": "Soraddax",
+        "DR": 1,
+        "PDR": 0,
+        "status": "Active",
+        "current_awards": {
+            "dr_award": "",
+            "pdr_award": ""
+        },
+        "last_awards": {
+            "dr_award": [],
+            "pdr_award": []
+        },
+        "punishments": {
+            "strikes": [],
+            "warns": []
+        },
+        "roblox_profile": "https://www.roblox.com/users/1032811900/profile"
     }
 ]
