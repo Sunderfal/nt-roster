@@ -29,7 +29,7 @@ def find_user(data: dict, username: discord.Member):
     user_found = None
 
     while i < len(data) and not found:
-        if data[i]["username"] == username:
+        if data[i]['username'] == username:
             found = True
             user_found = data[i]
         i += 1
@@ -42,19 +42,19 @@ def update_user_username(data: dict, before_username: str, after_username: str):
     found = False
 
     while i < len(data) and not found:
-        if data[i]["username"] == before_username:
+        if data[i]['username'] == before_username:
             found = True
-            data[i]["username"] = after_username
+            data[i]['username'] = after_username
         i += 1
     
     print(f"{before_username}'s username updated in the JSON to {after_username}")
 
 def update_user_status(user: dict):
 
-    if user["status"] == "Active":
-        user["status"] = "IA"
+    if user['status'] == "Active":
+        user['status'] = "IA"
     else:
-        user["status"] = "Active"
+        user['status'] = "Active"
 
 def update_user_points(user: dict, amount: int, type: discord.app_commands.Choice[str], method: discord.app_commands.Choice[str]):
 
@@ -72,15 +72,15 @@ def punish_user(user: dict, reason: str, evidence: str):
     is_warned = False
 
     strike = {"reason": reason, "date": today_date, "evidence": evidence}
-    user["punishments"]["strikes"].append(strike)
+    user['punishments']['strikes'].append(strike)
 
-    if len(user["punishments"]["strikes"]) == 3:
+    if len(user['punishments']['strikes']) == 3:
         is_warned = True
         
-        warn = {"reason": f"Reached {len(user["punishments"]["warns"])+1}º set of Strikes", "date": today_date}
+        warn = {"reason": f"Reached {len(user['punishments']['warns'])+1}º set of Strikes", "date": today_date}
         
-        user["punishments"]["warns"].append(warn)
-        user["punishments"]["strikes"].clear()
+        user['punishments']['warns'].append(warn)
+        user['punishments']['strikes'].clear()
 
     return is_warned
 
@@ -111,9 +111,9 @@ def get_id_award_by_name(award_name, award_type):
     id_found = None
 
     while i < len(awards[award_type]) and not found:
-        if awards[award_type][i]["name"] == award_name:
+        if awards[award_type][i]['name'] == award_name:
             found = True
-            id_found = awards[award_type][i]["id"]
+            id_found = awards[award_type][i]['id']
         i += 1
 
     return id_found
@@ -126,15 +126,15 @@ def verify_expired_warns(user: dict):
     valid_warns = []
     expired_warns = False
 
-    for warn in user["punishments"]["warns"]:
-        warn_date = datetime.strptime(warn["date"], "%Y-%m-%d").date()
+    for warn in user['punishments']['warns']:
+        warn_date = datetime.strptime(warn['date'], "%Y-%m-%d").date()
 
         if today_date - warn_date <= three_months:
             expired_warns = True
             valid_warns.append(warn)
 
-    user["punishments"]["warns"].clear()
-    user["punishments"]["warns"].extend(valid_warns)
+    user['punishments']['warns'].clear()
+    user['punishments']['warns'].extend(valid_warns)
 
     return expired_warns
 
@@ -149,7 +149,7 @@ async def get_roblox_profile(username: str):
 
         if response.status_code == 200:
             user_data = response.json()
-            user_id = user_data["data"][0]["id"]
+            user_id = user_data['data'][0]['id']
             profile = f"https://www.roblox.com/users/{user_id}/profile"
         elif response.status_code == 429:
             print("Too many requests to get the roblox profile. Trying again in 60 seconds...")
@@ -165,7 +165,11 @@ async def get_player_status(user_ids: list):
     url = "https://presence.roblox.com/v1/presence/users"
     roblox_security_cookie = os.getenv("ROBLOX_SECURITY_COOKIE")
 
-    headers = {"Content-Type": "application/json", "Cookie": roblox_security_cookie, "accept": "application/json"}
+    headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json", 
+        "Cookie": f".ROBLOSECURITY={roblox_security_cookie}", 
+    }
     body = {"userIds": user_ids}
 
     status_data = {}
@@ -203,25 +207,25 @@ async def manage_roles(member: discord.Member, user_data: dict, points: int, typ
     awards_points_needed = "drs_needed" if type == "DR" else "pdrs_needed"
     
     user_award_type = "dr_award" if type == "DR" else "pdr_award"
-    current_user_award = user_data["current_awards"][user_award_type]  
-    last_user_awards = user_data["last_awards"][user_award_type]
+    current_user_award = user_data['current_awards'][user_award_type]  
+    last_user_awards = user_data['last_awards'][user_award_type]
     new_award = None
     
     for award in awards[awards_type]:
         
-        award_id = award["id"]
+        award_id = award['id']
 
         award_role = member.guild.get_role(award_id)
         member_role = member.get_role(award_id)
 
         if member_role is None and points >= award[awards_points_needed] and award_role.name not in last_user_awards:
             new_award = award_role.name
-            user_data["current_awards"][user_award_type] = new_award
+            user_data['current_awards'][user_award_type] = new_award
             
             await member.add_roles(award_role)                
             
             if current_user_award:
-                user_data["last_awards"][user_award_type].append(current_user_award)
+                user_data['last_awards'][user_award_type].append(current_user_award)
 
                 id = get_id_award_by_name(current_user_award, awards_type)
                 role_to_remove = member.guild.get_role(id)

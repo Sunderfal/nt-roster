@@ -23,7 +23,7 @@ class LeaderboardView(discord.ui.View):
         for i, user_data in enumerate(self.data[start:end], start=start):
             embed.add_field(
                 name="", 
-                value=f"{i+1}. [{user_data["username"]}]({user_data["roblox_profile"]})\n**Draid Points:** {user_data["DR"]}\n**Pure Draid Points:** {user_data["PDR"]}\n**Status:** {user_data["status"]}", 
+                value=f"{i+1}. [{user_data['username']}]({user_data['roblox_profile']})\n**Draid Points:** {user_data['DR']}\n**Pure Draid Points:** {user_data['PDR']}\n**Status:** {user_data['status']}", 
                 inline=False
             )
 

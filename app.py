@@ -94,7 +94,7 @@ async def on_member_update(before: discord.Member, after: discord.Member):
         after_username = after.display_name
         functions.update_user_username(data, before_username, after_username)
     elif NT_ROLE_ID not in after_roles and NT_ROLE_ID in before_roles: 
-        data = [user for user in data if user["username"] != username]
+        data = [user for user in data if user['username'] != username]
         print(f"Removed {username} from the JSON")
     
     functions.update_json(DATA_PATH, data)
@@ -141,7 +141,7 @@ async def commands(interaction: discord.Interaction):
 @has_specific_role("Night Talons")
 async def leaderboard(interaction: discord.Interaction):
 
-    data = sorted(functions.read_json(DATA_PATH), key=lambda x: x["DR"], reverse=True)
+    data = sorted(functions.read_json(DATA_PATH), key=lambda x: x['DR'], reverse=True)
 
     command_author = interaction.user.display_name
     command_author_pfp = interaction.user.avatar.url if interaction.user.avatar is not None else interaction.user.default_avatar.url
@@ -171,11 +171,11 @@ async def info(interaction: discord.Interaction, member: discord.Member = None):
             color=discord.Color.dark_red()
         )
 
-        embed.set_author(name=f"{user_data["username"]}'s information", icon_url=user_pfp)
+        embed.set_author(name=f"{user_data['username']}'s information", icon_url=user_pfp)
         
-        embed.add_field(name="POINTS", value=f"Draid Points: {user_data["DR"]}\nPure Draid Points: {user_data["PDR"]}", inline=False)
-        embed.add_field(name="STATUS", value=user_data["status"], inline=False)
-        embed.add_field(name="STRIKES", value=len(user_data["punishments"]["strikes"]), inline=False)
+        embed.add_field(name="POINTS", value=f"Draid Points: {user_data['DR']}\nPure Draid Points: {user_data['PDR']}", inline=False)
+        embed.add_field(name="STATUS", value=user_data['status'], inline=False)
+        embed.add_field(name="STRIKES", value=len(user_data['punishments']['strikes']), inline=False)
         
         warns_value = ""
 
@@ -183,9 +183,9 @@ async def info(interaction: discord.Interaction, member: discord.Member = None):
             functions.update_json(DATA_PATH, data)
             functions.update_json(DATA_BACKUP_PATH, data)
 
-        if len(user_data["punishments"]["warns"]) >= 1:
-            for i, warn in enumerate(user_data["punishments"]["warns"]):
-                warns_value += f"{i+1} -> {warn["reason"]} ({warn["date"]})\n\n"
+        if len(user_data['punishments']['warns']) >= 1:
+            for i, warn in enumerate(user_data['punishments']['warns']):
+                warns_value += f"{i+1} -> {warn['reason']} ({warn['date']})\n\n"
         else:
             warns_value = "No warns registered"
 
@@ -213,7 +213,7 @@ async def ia(interaction: discord.Interaction, member: discord.Member = None):
         current_time = datetime.now(timezone.utc).strftime("%m/%d/%Y")
 
         functions.update_user_status(user_data)
-        new_user_data = user_data["status"]
+        new_user_data = user_data['status']
 
         embed = discord.Embed(
             title="STATUS UPDATED",
@@ -309,7 +309,7 @@ async def strike(interaction: discord.Interaction, member: discord.Member, reaso
         current_time = datetime.now(timezone.utc).strftime("%m/%d/%Y")
 
         is_warned = functions.punish_user(user_data, reason, evidence)
-        punish_msg = f"striked + warned **({len(user_data["punishments"]["warns"])}º set of Strikes)**" if is_warned else "striked"
+        punish_msg = f"striked + warned **({len(user_data['punishments']['warns'])}º set of Strikes)**" if is_warned else "striked"
 
         description = f"{username} has been **Striked** + **Warned**" if is_warned else f"{username} has been **Striked**"
 
@@ -331,8 +331,8 @@ async def strike(interaction: discord.Interaction, member: discord.Member, reaso
 
 leadership = functions.read_json(LEADERSHIP_PATH)
 games_info = functions.read_json(GAMES_INFO_PATH)
-previous_states = {leader["id"]: None for leader in leadership}
-previous_games = {leader["id"]: None for leader in leadership}
+previous_states = {leader['id']: None for leader in leadership}
+previous_games = {leader['id']: None for leader in leadership}
 
 async def nt_duty():
     
@@ -342,24 +342,24 @@ async def nt_duty():
 
     while not bot.is_closed():
         
-        leaders_ids = [leader["id"] for leader in leadership]
+        leaders_ids = [leader['id'] for leader in leadership]
         status_data = await functions.get_player_status(leaders_ids)
 
         try:
             for leader in leadership:
-                leader_id = leader["id"]
-                leader_username = leader["username"]
+                leader_id = leader['id']
+                leader_username = leader['username']
 
                 current_status = None
                 previous_game = None
 
-                for user_status in status_data["userPresences"]:
-                    if user_status["userId"] == leader_id:
+                for user_status in status_data['userPresences']:
+                    if user_status['userId'] == leader_id:
                         current_status = user_status
                         break
 
                 if current_status:
-                    current_presence_type = current_status["userPresenceType"]
+                    current_presence_type = current_status['userPresenceType']
                     current_game = str(current_status.get("placeId", ""))
                     
                     previous_presence_type = previous_states[leader_id]
@@ -372,10 +372,10 @@ async def nt_duty():
                             color=discord.Color.dark_red()
                         )
 
-                        game_image_url = games_info[current_game]["game_image"]
+                        game_image_url = games_info[current_game]['game_image']
 
                         embed.add_field(name="ENTITY", value=f"[{leader_username}](https://www.roblox.com/users/{leader_id}/profile)", inline=True)
-                        embed.add_field(name="LOCATION", value=games_info[current_game]["game_name"], inline=True)
+                        embed.add_field(name="LOCATION", value=games_info[current_game]['game_name'], inline=True)
 
                         embed.set_image(url=game_image_url)
                         embed.set_footer(text="NO SHADOW IS EMPTY.", icon_url=NT_LOGO)
