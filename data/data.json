@@ -20,8 +20,8 @@
     },
     {
         "username": "ZDVNZ",
-        "DR": 71,
-        "PDR": 22,
+        "DR": 72,
+        "PDR": 23,
         "status": "IA",
         "current_awards": {
             "dr_award": "",
@@ -41,7 +41,7 @@
     },
     {
         "username": "N_ightpaw",
-        "DR": 70,
+        "DR": 72,
         "PDR": 20,
         "status": "Active",
         "current_awards": {
@@ -62,7 +62,7 @@
     },
     {
         "username": "heyyanewbie",
-        "DR": 92,
+        "DR": 96,
         "PDR": 24,
         "status": "Active",
         "current_awards": {
@@ -89,7 +89,7 @@
     },
     {
         "username": "Rvbypaw",
-        "DR": 51,
+        "DR": 52,
         "PDR": 18,
         "status": "Active",
         "current_awards": {
@@ -235,7 +235,7 @@
     },
     {
         "username": "enricokozo",
-        "DR": 23,
+        "DR": 24,
         "PDR": 7,
         "status": "Active",
         "current_awards": {
@@ -334,28 +334,9 @@
         "roblox_profile": "https://www.roblox.com/users/1175792084/profile"
     },
     {
-        "username": "R0sepaw",
-        "DR": 2,
-        "PDR": 0,
-        "status": "Active",
-        "current_awards": {
-            "dr_award": "",
-            "pdr_award": ""
-        },
-        "last_awards": {
-            "dr_award": [],
-            "pdr_award": []
-        },
-        "punishments": {
-            "strikes": [],
-            "warns": []
-        },
-        "roblox_profile": "https://www.roblox.com/users/113030016/profile"
-    },
-    {
         "username": "z0mbipaw",
-        "DR": 4,
-        "PDR": 0,
+        "DR": 6,
+        "PDR": 1,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
@@ -373,8 +354,8 @@
     },
     {
         "username": "heavnkai",
-        "DR": 3,
-        "PDR": 0,
+        "DR": 6,
+        "PDR": 1,
         "status": "Active",
         "current_awards": {
             "dr_award": "",
